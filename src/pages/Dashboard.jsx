@@ -12,7 +12,7 @@ export default function Dashboard() {
       <Navbar />
 
       <iframe
-        src="http://localhost:8501"
+        src="https://dashboard-production-d32f.up.railway.app"
         title="Stroke Dashboard"
         style={{
           width: "100%",
