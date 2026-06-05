@@ -5,8 +5,9 @@ export default function Dashboard() {
     <div
       style={{
         width: "100%",
-        height: "100vh",
-        overflow: "hidden"
+        minHeight: "100vh",
+        background: "#eef4ff",
+        padding: "40px 20px 80px"
       }}
     >
       <Navbar />
@@ -16,9 +17,11 @@ export default function Dashboard() {
         title="Stroke Dashboard"
         style={{
           width: "100%",
-          height: "calc(100vh - 70px)",
+          height: "calc(100vh - 140px)",
           border: "none",
-          overflow: "auto"
+          borderRadius: "18px",
+          marginTop: "20px",
+          background: "white"
         }}
       />
     </div>
