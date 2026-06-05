@@ -4,7 +4,6 @@ export default function StepIndicator() {
 
       <div className="step">
         <div className="circle">1</div>
-
         <div className="step-label">
           Data Pasien
         </div>
@@ -14,7 +13,6 @@ export default function StepIndicator() {
 
       <div className="step">
         <div className="circle">2</div>
-
         <div className="step-label">
           Foto Wajah
         </div>
@@ -24,7 +22,6 @@ export default function StepIndicator() {
 
       <div className="step">
         <div className="circle">3</div>
-
         <div className="step-label">
           Hasil Analisis
         </div>
