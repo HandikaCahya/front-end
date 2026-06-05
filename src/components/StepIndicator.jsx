@@ -10,7 +10,7 @@ export default function StepIndicator() {
         </div>
       </div>
 
-      <div className="line"></div>
+      <div className="step-line"></div>
 
       <div className="step">
         <div className="circle">2</div>
@@ -20,7 +20,7 @@ export default function StepIndicator() {
         </div>
       </div>
 
-      <div className="line"></div>
+      <div className="step-line"></div>
 
       <div className="step">
         <div className="circle">3</div>
