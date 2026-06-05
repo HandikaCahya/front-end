@@ -11,6 +11,7 @@ export default function Analyze() {
 
   const [image, setImage] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
 
   const [age, setAge] = useState("");
@@ -63,6 +64,31 @@ export default function Analyze() {
   };
 
   const handleAnalyze = async () => {
+
+if (
+  !age ||
+  !gender ||
+  !hypertension ||
+  !heart_disease ||
+  !smoking ||
+  !activity
+) {
+  alert(
+    "Mohon lengkapi seluruh data pasien terlebih dahulu."
+  );
+  return;
+}
+
+if (
+  Number(age) < 1 ||
+  Number(age) > 150
+) {
+  alert(
+    "Umur harus antara 1 - 150 tahun."
+  );
+  return;
+}
+
     if (!image) {
       alert("Silakan ambil atau upload foto terlebih dahulu.");
       return;
@@ -72,6 +98,19 @@ export default function Analyze() {
       alert("File foto tidak ditemukan.");
       return;
     }
+    
+    if (
+      !age ||
+      Number(age) < 1 ||
+      Number(age) > 150
+    ) {
+      alert(
+        "Umur harus diisi antara 1 sampai 150 tahun."
+      );
+      return;
+    }
+    
+    setLoading(true);
 
     try {
       const formData = new FormData();
@@ -131,10 +170,12 @@ export default function Analyze() {
   await detectStroke(formData);
 
 setResult(response.data);
+setLoading(false);
 
       console.log(response.data);
     } catch (error) {
       console.error(error);
+      setLoading(false);
 
       alert(
         error?.response?.data?.message ||
@@ -261,12 +302,16 @@ setResult(response.data);
   type="number"
   placeholder="Masukkan umur pasien"
   value={age}
-  min="0"
+  min="1"
+  max="150"
   onChange={(e) => {
     const value = e.target.value;
 
-    // cegah angka negatif
-    if (value === "" || Number(value) >= 0) {
+    if (
+      value === "" ||
+      (Number(value) >= 1 &&
+        Number(value) <= 150)
+    ) {
       setAge(value);
     }
   }}
@@ -387,11 +432,14 @@ setResult(response.data);
 </select>
 
   <button
-    className="button analyze-btn"
-    onClick={handleAnalyze}
-  >
-    Analisis Sekarang
-  </button>
+  className="button analyze-btn"
+  onClick={handleAnalyze}
+  disabled={loading}
+>
+  {loading
+    ? "⏳ Menganalisis..."
+    : "🔍 Analisis Sekarang"}
+</button>
 
           {result && (
   <div className="result-card">
@@ -523,6 +571,15 @@ setResult(response.data);
     </div>
 
     <div className="recommendation-box">
+
+      <div className="medical-disclaimer">
+  ⚠️ Hasil ini merupakan prediksi berbasis
+  Artificial Intelligence (AI) dan tidak
+  menggantikan diagnosis atau pemeriksaan
+  medis oleh dokter. Gunakan hasil ini
+  sebagai informasi awal untuk membantu
+  deteksi dini risiko stroke.
+</div>
 
   <h4>
     💡 Rekomendasi

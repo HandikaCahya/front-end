@@ -32,6 +32,30 @@
   color: #2563eb;
 }
 
+.active-link{
+  background:#e0ebff;
+  color:#2563eb;
+
+  padding:8px 14px;
+  border-radius:10px;
+
+  font-weight:700;
+}
+
+.active-link::after{
+  content:"";
+
+  position:absolute;
+  left:0;
+  bottom:-8px;
+
+  width:100%;
+  height:3px;
+
+  background:#2563eb;
+  border-radius:999px;
+}
+
 .logout-btn {
   background: #ef4444;
   color: white;

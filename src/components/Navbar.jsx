@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 
 export default function Navbar() {
@@ -20,13 +20,21 @@ export default function Navbar() {
       </Link>
 
       <div className="navbar-menu">
-        <Link to="/dashboard" className="navbar-link">
+        <NavLink
+        to="/dashboard"
+        className={({ isActive }) => isActive? "navbar-link active-link" : "navbar-link"
+        }
+        >
           Dashboard
-        </Link>
-
-        <Link to="/analysis" className="navbar-link">
-          Analisis
-        </Link>
+          </NavLink>
+          
+          <NavLink
+          to="/analysis"
+          className={({ isActive }) => isActive? "navbar-link active-link" : "navbar-link"
+          }
+          >
+            Analisis
+            </NavLink>
 
         <button
           className="logout-btn"

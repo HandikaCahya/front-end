@@ -129,18 +129,6 @@ export default function Home() {
 
           </div>
 
-          <div className="feature-card">
-
-            <h3>📝 Riwayat Pemeriksaan</h3>
-
-            <p>
-              Semua hasil deteksi tersimpan sehingga
-              pengguna dapat melihat histori analisis
-              sebelumnya kapan saja.
-            </p>
-
-          </div>
-
         </div>
 
       </section>
