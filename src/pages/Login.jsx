@@ -59,7 +59,7 @@ navigate("/dashboard");
           </h1>
 
           <p className="login-subtitle">
-            Masuk ke akun StrokeAI untuk mengakses dashboard dan hasil analisis.
+            Masuk ke akun NeuroFace untuk mengakses dashboard dan hasil analisis.
           </p>
 
           <input

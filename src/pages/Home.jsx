@@ -9,7 +9,7 @@ export default function Home() {
       <nav className="home-navbar">
 
         <div className="logo">
-          🧠 StrokeAI
+          🧠 NeuroFace
         </div>
 
         <div className="nav-buttons">
@@ -46,7 +46,7 @@ export default function Home() {
           </h1>
 
           <p>
-            StrokeAI membantu melakukan analisis risiko stroke
+            NeuroFace membantu melakukan analisis risiko stroke
             menggunakan kombinasi Machine Learning Random Forest,
             Facial Detection AI, dan data kesehatan pasien secara
             cepat, akurat, dan mudah digunakan.
@@ -148,7 +148,7 @@ export default function Home() {
       {/* ================= WORKFLOW ================= */}
       <section className="workflow">
 
-        <h2>Cara Kerja StrokeAI</h2>
+        <h2>Cara Kerja NeuroFace</h2>
 
         <div className="steps">
 
@@ -235,7 +235,7 @@ export default function Home() {
       <footer className="footer">
 
         <p>
-          © 2026 StrokeAI | Capstone Project DBS Foundation
+          © 2026 NeuroFace | Capstone Project DBS Foundation
         </p>
 
       </footer>

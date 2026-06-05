@@ -17,7 +17,8 @@ export default function Dashboard() {
         style={{
           width: "100%",
           height: "calc(100vh - 70px)",
-          border: "none"
+          border: "none",
+          overflow: "auto"
         }}
       />
     </div>

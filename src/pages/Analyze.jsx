@@ -397,7 +397,7 @@ setResult(response.data);
   <div className="result-card">
 
     <div className="result-header">
-      <h2>📊 Hasil Analisis StrokeAI</h2>
+      <h2>📊 Hasil Analisis NeuroFace</h2>
 
       <div
         className={`status-badge ${

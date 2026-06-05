@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="navbar">
 
       <Link to="/dashboard" className="navbar-logo">
-        🧠 StrokeAI
+        🧠NeuroFace 
       </Link>
 
       <div className="navbar-menu">

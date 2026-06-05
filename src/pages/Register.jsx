@@ -65,7 +65,7 @@ export default function Register() {
           </h1>
 
           <p className="login-subtitle">
-            Daftar ke akun StrokeAI untuk mengakses dashboard dan hasil analisis.
+            Daftar ke akun NeuroFace untuk mengakses dashboard dan hasil analisis.
           </p>
 
           <input
